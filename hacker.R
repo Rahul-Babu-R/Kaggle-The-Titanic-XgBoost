@@ -79,5 +79,5 @@ pred <- predict(model_xgb, as.matrix(X_test),missing=NA)
 prediction <- as.numeric(pred > 0.5)
 
 submit <- data.frame("PassengerId"=X_ids, "Survived"=prediction)
-write.csv(submit, "submit_xgb.csv", row.names=F)
+write.csv(submit, "./ensemble/submit_xgb.csv", row.names=F)
 

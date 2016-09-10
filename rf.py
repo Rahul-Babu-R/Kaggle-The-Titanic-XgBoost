@@ -43,7 +43,7 @@ submissions = pd.DataFrame({
     "PassengerId": test["PassengerId"],
     "Survived": predictions
 })
-submissions.to_csv('submit_rf.csv', sep=',',index=None )
+submissions.to_csv('.\ensemble\submit_rf.csv', sep=',',index=None )
 print 'LRAlgo Started'
 lr.fit(train[predictors],y)
 predictions = lr.predict(test[predictors])
@@ -51,4 +51,4 @@ submissions = pd.DataFrame({
     "PassengerId": test["PassengerId"],
     "Survived": predictions
 })
-submissions.to_csv('submit_lr.csv', sep=',',index=None )
+submissions.to_csv('.\ensemble\submit_lr.csv', sep=',',index=None )
